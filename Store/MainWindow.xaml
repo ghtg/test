@@ -1,0 +1,38 @@
+﻿<Window x:Name="MainWindow1" x:Class="Store.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Store"
+        mc:Ignorable="d"
+        Title="Ювелирный магазин" Height="450" Width="800" FontSize="14" ResizeMode="NoResize" Icon="/Resources/MainIcon.ico">
+    <Grid>
+        <StackPanel>
+            <StackPanel Orientation="Horizontal" Height="182">
+                <DataGrid x:Name="MainDataGrid" d:ItemsSource="{d:SampleData ItemCount=5}" FontSize="20" SelectionMode="Single" MinWidth="654.85" MinHeight="182" SelectionChanged="MainDataGrid_SelectionChanged" Width="654.85" Height="182" CanUserDeleteRows="False" CanUserAddRows="False">
+                    <DataGrid.ContextMenu>
+                        <ContextMenu>
+                            <MenuItem x:Name="AddToCartItem" Header="Добавить в корзину" Click="MenuItem_Click" />
+                            <MenuItem x:Name="RemoveFromCartItem" Header="Удалить из корзины" Click="MenuItem_Click_1" />
+                        </ContextMenu>
+                    </DataGrid.ContextMenu>
+                </DataGrid>
+                <Image x:Name="PictureBox" Source="/Resources/MainIcon.ico" Stretch="Fill" Width="144" StretchDirection="Both" Height="144"/>
+            </StackPanel>
+
+            <StackPanel Height="29" Orientation="Horizontal">
+                <Button x:Name="LoginButton" Content="Войти" Width="0" FontSize="20" Click="Login_Click"/>
+                <Button x:Name="LoadInventoryButton" Content="Обновить список товаров" Width="186" FontSize="14" Click="LoadInventory_Click"/>
+                <Button x:Name="LoadOrdersButton" Content="Обносить список заказов" Width="176" FontSize="14" Click="LoadOrders_Click"/>
+                <Button x:Name="ClearCartButton" Content="Очистить корзину" Width="133" Click="ClearCartButton_Click"/>
+            </StackPanel>
+            <StackPanel Height="26" Orientation="Horizontal">
+                <Button x:Name="AddImageButton" Content="Добавить изображение к выделенному товару" Click="LoadImageButton_Click" Width="324"/>
+                <Button x:Name="ChangeOrderStateButton" Content="Изменить статус выбранного заказа на:" Width="270" FontSize="14" Click="ChangeOrderStateButton_Click"/>
+                <ComboBox x:Name="OrderStateComboBox" Width="118"/>
+            </StackPanel>
+            <DataGrid x:Name="CartDataGrid" Height="131" d:ItemsSource="{d:SampleData ItemCount=5}" AutoGenerateColumns="True"/>
+            <Label x:Name="CheckLabel" Content="Чек: 0" FontWeight="Bold"/>
+        </StackPanel>
+    </Grid>
+</Window>

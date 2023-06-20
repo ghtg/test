@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="009fc384a34346229085c938d90a77f0" Name="Diagram1">
+        <EntityTypeShape EntityType="JewelryMilenkovModel.Cart" Width="1.5" PointX="7.5" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="JewelryMilenkovModel.Goods" Width="1.5" PointX="5.75" PointY="5" IsExpanded="true" />
+        <EntityTypeShape EntityType="JewelryMilenkovModel.GoodsInventory" Width="1.5" PointX="8" PointY="5.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="JewelryMilenkovModel.Inventory" Width="1.5" PointX="5.75" PointY="8.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="JewelryMilenkovModel.Order" Width="1.5" PointX="5.25" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="JewelryMilenkovModel.OrderState" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="JewelryMilenkovModel.sysdiagrams" Width="1.5" PointX="0.75" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="JewelryMilenkovModel.Users" Width="1.5" PointX="3" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="JewelryMilenkovModel.UserState" Width="1.5" PointX="0.75" PointY="1.375" IsExpanded="true" />
+        <AssociationConnector Association="JewelryMilenkovModel.FK_Cart_Order" ManuallyRouted="false" />
+        <AssociationConnector Association="JewelryMilenkovModel.FK_GoodsInventory_Goods" ManuallyRouted="false" />
+        <AssociationConnector Association="JewelryMilenkovModel.FK_GoodsInventory_Inventory" ManuallyRouted="false" />
+        <AssociationConnector Association="JewelryMilenkovModel.FK_Order_OrderState" ManuallyRouted="false" />
+        <AssociationConnector Association="JewelryMilenkovModel.FK_Order_Users" ManuallyRouted="false" />
+        <AssociationConnector Association="JewelryMilenkovModel.FK_Users_UserState" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>
